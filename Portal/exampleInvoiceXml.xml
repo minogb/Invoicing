@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<invoice>
+		<customer>
+			<name>George</name>
+			<email>whatever@something.com</email>
+			<phone>2131231313</phone>
+			<address>
+				<line1>First Address Line</line1>
+				<line2>Second Address Line</line2>
+				<city>City Here</city>
+				<state>State Here</state>
+				<zipcode>Zipcode Here</zipcode>
+			</address>
+		</customer>
+		<job>
+			<name>George</name>
+			<email>whatever@something.com</email>
+			<phone>2131231313</phone>
+			<address>
+				<line1>First Address Line</line1>
+				<line2>Second Address Line</line2>
+				<city>City Here</city>
+				<state>State Here</state>
+				<zipcode>Zipcode Here</zipcode>
+			</address>
+		</job>
+		<item>
+			<name>First Item</name>
+			<description>Item First in the List</description>
+			<qnty>20</qnty>
+			<price>2.5</price>
+			<tax>10</tax>
+		</item>
+		<item>
+			<name>Second Item</name>
+			<description>Item Second in the List</description>
+			<qnty>100</qnty>
+			<price>60.2</price>
+			<tax>9.8</tax>
+		</item>
+		<item>
+			<name>Third Item</name>
+			<description>Item Third in the List</description>
+			<qnty>5.6</qnty>
+			<price>20</price>
+			<tax>10</tax>
+		</item>
+	</invoice>

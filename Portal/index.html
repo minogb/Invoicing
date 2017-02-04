@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!--
+Note: style was added directly to div, should be in style sheet, for speedy dev
+-->
+<html>
+    <head>
+        <title>Invoice</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="script.js"></script>
+    </head>
+    <body id="body" style="background-color:whitesmoke;">
+        <div style="width:100%; float:left;">
+            Upload XML Invoice<br>
+            <textarea id="xmlInput" style="float:left;"></textarea>
+            <a href="javascript:uploadXML()"><div style="width: 100px; background-color:white; border-style:double; float:left;">Upload</div></a>
+            <a href="javascript:usePreXML()"><div style="margin-left:10px; width: 100px; background-color:white; border-style:double; float:left;">Use Default</div></a>
+        </div>
+        <div style="width:100%; float:left;">
+            Search for Invoice:<br>
+            <input id="searchInvoiceBar" placeholder="Customer or job name" style="float:left;">
+            <a href="javascript:searchInvoices()"><div style="width: 100px; background-color:white; border-style:double; float:left;">Search</div></a>
+        </div>
+        <div>
+            <form name="invoice">
+                <div style="width: 185px; height: 345px; float:left; background-color:graytext; border-style: dashed; border-color: black">
+                    <div style="margin-top:25px"></div>
+                    Costumer Name<br>
+                    <input type="text" name="customerName"><br>
+                    Phone Number<br>
+                    <input type="text" name="customerPhone"><br>
+                    Email Address<br>
+                    <input type="text" name="customerEmail"><br>
+                    Address Line One<br>
+                    <input type="text" name="cAddLineOne"><br>
+                    Address Line Two<br>
+                    <input type="text" name="cAddLineTwo"><br>
+                    City<br>
+                    <input type="text" name="cAddCity"><br>
+                    State<br>
+                    <input type="text" name="cAddState"><br>
+                    ZipCode<br>
+                    <input type="text" name="cAddZip"><br>
+                </div>
+                <div  style="width: 185px; height: 345px; float:left; background-color:graytext; border-style: dashed; border-color: black; border-left-width: 0px">
+                    <a href="javascript:toggleUseJob()"><div style="width: 175px; background-color: ghostwhite; border-style: double;">
+                        Use Customer Information
+                    </div></a>
+                    <div id="jobDiv">
+                        Job Name<br>
+                        <input type="text" name="jobName"><br>
+                        Phone Number<br>
+                        <input type="text" name="jobPhone"><br>
+                        Email Address<br>
+                        <input type="text" name="jobEmail"><br>
+                        Address Line One<br>
+                        <input type="text" name="jAddLineOne"><br>
+                        Address Line Two<br>
+                        <input type="text" name="jAddLineTwo"><br>
+                        City<br>
+                        <input type="text" name="jAddCity"><br>
+                        State<br>
+                        <input type="text" name="jAddState"><br>
+                        ZipCode<br>
+                        <input type="text" name="jAddZip"><br>
+                    </div>
+                </div><br>
+                <div style="width:100%; float:left; margin-top:5px;">
+                    <a href="javascript:newItem()"><div style="background-color:orange; float:left">
+                            <div style="margin:5px">Add Item</div>
+                    </div></a>
+                    <a href="javascript:removeItem()"><div style="background-color:orange; float:left; margin-left:1%;" onclick="removeItem()">
+                            <div style="margin:5px">Remove Item</div>
+                    </div></a>
+                </div>
+                <div id="items">
+                <div id ="0item" style="float:left; margin:1%; background-color:graytext; width: 175px; height:200px;">
+                    Name<br>
+                    <input type="text" id="0itemName"><br>
+                    Description<br>
+                    <input type="text" id="0itemDescription"><br>
+                    Quantity<br>
+                    <input type="number" id="0itemQuantity" value="0"><br>
+                    Price<br>
+                    <input type="number" id="0itemPrice" value="0"><br>
+                    Tax<br>
+                    <input type="number" id="0itemTax" value="0"><br>
+                </div>
+                </div>
+                <div style="width:100%; float:left">
+                    <a href="javascript:submitForm()"><div style="width: 200px; float:left; background-color: gray; border-style: double;">Submit</div></a>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
